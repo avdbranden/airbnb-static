@@ -2,121 +2,116 @@
 title: Welcome
 ---
 
-<!-- Banner -->
+<div class="banner text-center">
+  <h1>Startup tools</h1>
+  <p>Very cool stuff, useful and smart</p>
 
-
-<div class="banner text-center background-size" style="background-image: url('http://unsplash.it/1000/700/?image=0')">
-  <div class="banner-shadow"></div>
-  <div class="banner-content fade-and-slide">
-    <h1>Startup tools</h1>
-    <p>Very cool stuff, useful and smart</p>
-    <a href="#" class="btn btn-primary btn-lg">GET IT</a>
-  </div>
-</div>
-<!-- Cards -->
-
-  <div class="padded">
-  <div class="clearfix"></div>
-  <div class="feature">
-    <h2>
-      <%= image_tag "chat.png"%>
-      Discuss best tools
-    </h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores sequi sed, odit tenetur? Necessitatibus ad nulla deleniti quis vel facere hic illum omnis expedita beatae aliquam quibusdam asperiores laborum, magni.
-    </p>
-  </div>
-  <div class="clearfix"></div>
-  <div class="feature">
-    <h2>
-      <%= image_tag "mobile.png"%>
-      Always in sync
-    </h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea officia beatae, repellendus eveniet alias vel laboriosam, necessitatibus error cum asperiores facere aliquam consectetur ad impedit molestiae, harum? Vel, quidem, sit.
-    </p>
-  </div>
-  <div class="clearfix"></div>
-  <div class="feature">
-    <h2>
-      <%= image_tag "search.png"%>
-      Powerful search
-    </h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis optio adipisci minus vero voluptatum soluta corporis alias ut commodi non quaerat quasi reprehenderit sit dolore nulla qui cum explicabo, possimus.
-    </p>
-  </div>
-  <div class="clearfix"></div>
-  <div class="feature">
-    <h2>
-      <%= image_tag "heart.png"%>
-      Share the love
-    </h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure ab cumque delectus, reiciendis fugit molestiae totam obcaecati exercitationem illum amet, recusandae, odio est. Repudiandae sapiente provident, sint reprehenderit necessitatibus, magni.
-    </p>
-  </div>
+  <%= link_to "Get it", "team.html", class: "btn btn-primary" %>
 </div>
 
-<!-- Newsletter -->
+<div class="container">
+  <div class="row">
 
-<div class="padded">
-  <h2 class="section-header text-center">Most popular</h2>
-  <div class="card">
-    <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=0')"></span>
-    <span class="card-shadow"></span>
-    <span class="card-description">Popular</span>
-    <span class="card-text">
-      <h2>Trello</h2>
-      <p>Very cool stuff, useful and smart</p>
-    </span>
-    <span class="card-user">
-      <img src="http://placehold.it/50x50" class="avatar avatar-bordered">
-    </span>
-    <a href="#" class="card-link"></a>
+    <% data.features.each do |feature| %>
+
+    <div class="col-xs-12 col-sm-6 col-md-3">
+      <div class="feature">
+        <h2>
+          <%= image_tag feature.icon, class: "icon" %>
+          <%= feature.title %>
+        </h2>
+        <p><%= feature.description %></p>
+      </div>
+    </div>
+
+    <% end %>
+
   </div>
-  <div class="card">
-    <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=1')"></span>
-    <span class="card-shadow"></span>
-    <span class="card-description">Popular</span>
-    <span class="card-text">
-      <h2>Intercom</h2>
-      <p>Very cool stuff, useful and smart</p>
-    </span>
-    <span class="card-user">
-      <img src="http://placehold.it/50x50" class="avatar avatar-bordered">
-    </span>
-    <a href="#" class="card-link"></a>
+
+  <div class="section">
+
+    <h2 class="text-center">Most popular</h2>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <% link_to "contact.html" do %>
+            <%= image_tag "https://unsplash.it/800/400", class: "img-responsive", alt: "chat bubble" %>
+          <% end %>
+          <div class="tag">Popular</div>
+          <div class="avatar">
+            <img class="avatar-img" src="http://lorempixel.com/200/200/people/" alt="avatar">
+          </div>
+          <div class="description">
+            <h4>Trello</h4>
+            <p>Very cool stuff, useful and smart</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <img class="img-responsive" src="https://unsplash.it/800/400" alt="">
+          <div class="tag">Popular</div>
+          <div class="avatar">
+            <img class="avatar-img" src="http://lorempixel.com/200/200/people/" alt="avatar">
+          </div>
+          <div class="description">
+            <h4>Trello</h4>
+            <p>Very cool stuff, useful and smart</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <img class="img-responsive" src="https://unsplash.it/800/400" alt="">
+          <div class="tag">Popular</div>
+          <div class="avatar">
+            <img class="avatar-img" src="http://lorempixel.com/200/200/people/" alt="avatar">
+          </div>
+          <div class="description">
+            <h4>Trello</h4>
+            <p>Very cool stuff, useful and smart</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
-  <div class="card">
-    <span class="card-bg" style="background-image: url('http://unsplash.it/500/300/?image=2')"></span>
-    <span class="card-shadow"></span>
-    <span class="card-description">Popular</span>
-    <span class="card-text">
-      <h2>Mixpanel</h2>
-      <p>Very cool stuff, useful and smart</p>
-    </span>
-    <span class="card-user">
-      <img src="http://placehold.it/50x50" class="avatar avatar-bordered">
-    </span>
-    <a href="#" class="card-link"></a>
+
+  <div class="section text-center">
+
+    <h2>Get news from us</h2>
+    <p>Leave us your mail and get stylus news</p>
+
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="jane.doe@example.com">
+      </div>
+      <button type="submit" class="btn btn-primary">Send invitation</button>
+    </form>
+
   </div>
+
 </div>
-
-<!-- Map -->
 
 <div id="map"></div>
 
-<!-- Footer -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
-<div id="footer">
-  <ul class="list-inline">
-    <li><a href=""><i class="fa fa-youtube"></i></a></li>
-    <li><a href=""><i class="fa fa-instagram"></i></a></li>
-    <li><a href=""><i class="fa fa-facebook"></i></a></li>
-    <li><a href=""><i class="fa fa-twitter"></i></a></li>
-  </ul>
-
-  <p>This is a fictive product by LeWagon</p>
-</div>
+<script type="text/javascript">
+var myLatlng = new google.maps.LatLng(48.852937,2.364178);
+var myOptions = {
+  zoom: 16,
+  center: myLatlng,
+  scrollwheel: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP,
+  styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}]
+};
+var map = new google.maps.Map(document.getElementById('map'), myOptions);
+var marker = new google.maps.Marker({
+  position: myLatlng,
+  map: map,
+  title:"You are here!"
+});
+</script>
 

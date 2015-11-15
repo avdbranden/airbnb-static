@@ -1,0 +1,22 @@
+---
+title: My products
+---
+
+<div class="container">
+  <div class="row text-center">
+    <h1>Check out our products</h1>
+    <% data.products.each do |product| %>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="row icon-badge-bordered">
+          <div class="col-xs-3 col-sm-12">
+            <%= image_tag product.picture, class: "img-circle img-responsive center-block" %>
+          </div>
+          <div class="col-xs-9 col-sm-12">
+            <h2><%= product.name %></h2>
+            <p><%= product.summary %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -2,12 +2,12 @@
 title: My products
 ---
 
-<div class="container">
-  <div class="row text-center">
-    <h1>Check out our products</h1>
+<div class="container text-center padded">
+  <h1>Check out our products</h1>
+  <div class="row text-center padded">
     <% data.products.each do |product| %>
       <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="row icon-badge-bordered">
+        <div class="row icon-badge-bordered icon-badge-large">
           <div class="col-xs-3 col-sm-12">
             <%= image_tag product.picture, class: "img-circle img-responsive center-block" %>
           </div>

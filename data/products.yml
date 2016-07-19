@@ -1,18 +1,15 @@
-- name: Kudoz
-  picture: http://unsplash.it/150x150
+Kudoz:
+  name:    Kudoz
+  picture: http://unsplash.it/300x300
   summary: Tinder for job search
-- name: Krawd
-  picture: http://unsplash.it/150x150
+  tag:     Popular
+Krawd:
+  name:    Krawd
+  picture: http://unsplash.it/300x300
   summary: Market place for brands and designers
-- name: Kudoz
-  picture: http://unsplash.it/150x150
-  summary: Tinder for job search
-- name: Krawd
-  picture: http://unsplash.it/150x150
-  summary: Market place for brands and designers
-- name: Kudoz
-  picture: http://unsplash.it/150x150
-  summary: Tinder for job search
-- name: Krawd
-  picture: http://unsplash.it/150x150
-  summary: Market place for brands and designers
+  tag:     Cool
+Trello:
+  name:    Trello
+  picture: http://unsplash.it/300x300
+  summary: make you apps look good
+  tag:     Reference

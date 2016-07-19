@@ -2,6 +2,8 @@
   position: relative;
   color: #FFF;
   background-size: cover;
+  border: 2px solid $gray;
+  border-radius: 5px;
 }
 
 .tag {
@@ -21,6 +23,13 @@
     height: 30px;
     border-radius: 20px;
   }
+}
+
+.title {
+  position: absolute;
+  bottom: 45px;
+  left: 5px;
+  font-weight: bold;
 }
 
 .description {

@@ -1,15 +1,15 @@
 ---
 title: Welcome
 ---
-  <div class="banner text-center">
-    <%= image_tag "https://unsplash.it/1200/400", class: "img-responsive img-border center-block" %>
-     <!--  <div class="banner-shadow"></div> -->
-      <div class="banner-content">
-          <h1>Startup tools</h1>
-          <p>Very cool stuff, useful and smart</p>
-          <%= link_to "Get it", "team.html", class: "btn btn-primary" %>
-      </div>
-  </div>
+<div class="banner">
+  <%= image_tag "https://unsplash.it/1200/400", class: "img-responsive img-border center-block" %>
+   <div class="banner-shadow"></div>
+    <div class="banner-content">
+        <h1>Startup tools</h1>
+        <p>Very cool stuff, useful and smart</p>
+        <%= link_to "Get it", "home.html", class: "btn btn-primary" %>
+    </div>
+</div>
 
 
 <div class="container">
@@ -31,55 +31,35 @@ title: Welcome
 
   </div>
 
-  <div class="container text-center">
+  <div class="product-cards">
+    <div class="container">
+      <div class="row">
+        <% data.products.values.each do |product| %>
 
-    <h2>Most popular</h2>
+        <div class="col-xs-12 col-sd-6 col-md-4">
+          <div class="card">
+            <% link_to do %>
+              <%= image_tag product.picture %>
+            <% end %>
+            <div class="tag">
+              <%= product.tag %>
+            </div>
+            <div class="title">
+              <%= product.name %>
+            </div>
+            <div class="description">
+              <%= product.summary %>
+            </div>
+          </div>
 
-    <div class="row">
-      <div class="col-xs-12 col-sm-4 col-bd-4">
-        <div class="card">
-          <% link_to "contact.html" do %>
-            <%= image_tag "https://unsplash.it/800/400", class: "img-responsive", class: "img-border", alt: "chat bubble" %>
-          <% end %>
-          <div class="tag">Popular</div>
-          <div class="avatar">
-            <img class="avatar-img" src="http://lorempixel.com/200/200/people/" alt="avatar">
-          </div>
-          <div class="description">
-            <h4>Trello</h4>
-            <p>Very cool stuff, useful and smart</p>
-          </div>
         </div>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-bd-4">
-        <div class="card">
-          <%= image_tag "https://unsplash.it/800/400", class: "img-responsive", class: "img-border", alt: "chat bubble" %>
-          <div class="tag">Coolos</div>
-          <div class="avatar">
-            <img class="avatar-img" src="http://lorempixel.com/200/200/people/" alt="avatar">
-          </div>
-          <div class="description">
-            <h4>GitHub</h4>
-            <p>This is the way you doing</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-4 col-bd-4">
-        <div class="card">
-          <%= image_tag "https://unsplash.it/800/400", class: "img-responsive", class: "img-border", alt: "chat bubble" %>
-          <div class="tag">Special</div>
-          <div class="avatar">
-            <img class="avatar-img" src="http://lorempixel.com/200/200/people/" alt="avatar">
-          </div>
-          <div class="description">
-            <h4>Kaleos</h4>
-            <p>No tricks no bricks</p>
-          </div>
-        </div>
+        <% end %>
+
+
       </div>
     </div>
-
   </div>
+
 
   <div class="section text-center">
 

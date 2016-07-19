@@ -4,11 +4,13 @@
     font-size: 17px;
     line-height: 25px;
     font-weight: bold;
-    color: #666666;
+    color: $gray-darker;
+    text-align: center;
   }
 
   p {
-    color: #B3B3B3;
+    color: $gray-dark;
+    text-align: center;
   }
 
   .icon {
